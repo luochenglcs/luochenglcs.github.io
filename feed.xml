@@ -1,0 +1,2652 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <id>https://luochenglcs.github.io/</id>
+  <title>Cheng Luo</title>
+  <subtitle>Deeply understand the Linux kernel and become an excellent Linux OS operating system engineer</subtitle>
+  <updated>2024-04-18T08:54:43+00:00</updated>
+  <author>
+    <name>luochunsheng</name>
+    <uri>https://luochenglcs.github.io/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://luochenglcs.github.io/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="https://luochenglcs.github.io/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 luochunsheng </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>community contribution</title>
+    <link href="https://luochenglcs.github.io/posts/community-contribution/" rel="alternate" type="text/html" title="community contribution" />
+    <published>2024-03-14T06:10:00+00:00</published>
+  
+    <updated>2024-03-14T07:23:54+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/community-contribution/</id>
+    <content src="https://luochenglcs.github.io/posts/community-contribution/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="community" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      bcc:
+https://github.com/iovisor/bcc/pull/4935
+
+procps-ng:
+https://gitlab.com/procps-ng/procps/-/merge_requests/222
+
+kernel:
+https://lore.kernel.org/linux-mm/?q=luochunsheng
+
+numactl (maintainer):
+https://github.com/numactl/numactl/pulls?q=is%3Apr+author%3Aluochenglcs
+
+libhugetlbfs (maintainer):
+https://github.com/luochenglcs/libhugetlbfs/commits?author=luochenglcs
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>OpenEuler High-performance computing Kernel(HCK)</title>
+    <link href="https://luochenglcs.github.io/posts/OpenEuler-%E6%95%B0%E6%8E%A7%E5%88%86%E7%A6%BBHCK/" rel="alternate" type="text/html" title="OpenEuler High-performance computing Kernel(HCK)" />
+    <published>2023-12-16T00:00:00+00:00</published>
+  
+    <updated>2024-04-02T01:39:54+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/OpenEuler-%E6%95%B0%E6%8E%A7%E5%88%86%E7%A6%BBHCK/</id>
+    <content src="https://luochenglcs.github.io/posts/OpenEuler-%E6%95%B0%E6%8E%A7%E5%88%86%E7%A6%BBHCK/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="High-performance" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、HPC场景
+
+OpnEuler22.09 白皮书：
+
+https://www.openeuler.org/whitepaper/openEuler-whitepaper-2209.pdf  数控分离HCK
+
+1&amp;gt;  背景
+
+1、HPC介绍
+
+reference: 
+https://www.ibm.com/cn-zh/topics/hpc
+https://www.oracle.com/cn/cloud/hpc/what-is-hpc/
+
+
+高性能计算: 并行工作的强大处理器集群，处理海量多维数据集（大数据），并以极高的速度解决复杂问题。
+
+
+  HPC利用的技术： 任务数据分割并行计算 + 集群（超级计算机）
+
+
+
+  HPC 使用场景: 基因组学 医疗卫生 航空航天 天气预报 气候建模 ….
+
+
+
+  HPC的基准测试套：HPCG（高性能共轭梯度） HPL(测试高性能计算集...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>OpenEuler Generalized Memory Management(Gmem) For Heterogeneous Device</title>
+    <link href="https://luochenglcs.github.io/posts/openEuler-GMEM/" rel="alternate" type="text/html" title="OpenEuler Generalized Memory Management(Gmem) For Heterogeneous Device" />
+    <published>2023-12-15T00:00:00+00:00</published>
+  
+    <updated>2024-04-02T01:46:09+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/openEuler-GMEM/</id>
+    <content src="https://luochenglcs.github.io/posts/openEuler-GMEM/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="gmem" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      openEuler 23.09 白皮书
+
+https://www.openeuler.org/whitepaper/openEuler%2023.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf 异构通用内存管理框架（GMEM）特性
+
+1&amp;gt; 背景和问题
+
+在后摩尔时代，GPU、TPU 和 FPGA 等专用异构加速器设备正不断涌现，它们与 CPU 类似，需要将数据放在本地内存（例 如 LPDDR 或 HBM）中以提高计算速度。加速器厂商们也不可避免地需要开发复杂的内存管理系统。
+
+现行加速器内存管理方案存在诸多缺陷：
+
+• CPU 侧内存管理与加速器侧分离，数据显式搬移，加速器内存管理的易用性和性能难以平衡。
+
+• 大模型场景下加速器设备 HBM 内存（Hign BandWidth Memory）严重不足，现有的手动 s...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>GCC FDO</title>
+    <link href="https://luochenglcs.github.io/posts/%E5%8F%8D%E9%A6%88%E5%BC%8F%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96/" rel="alternate" type="text/html" title="GCC FDO" />
+    <published>2023-12-06T00:00:00+00:00</published>
+  
+    <updated>2023-12-06T00:00:00+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/%E5%8F%8D%E9%A6%88%E5%BC%8F%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96/</id>
+    <content src="https://luochenglcs.github.io/posts/%E5%8F%8D%E9%A6%88%E5%BC%8F%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="OS" />
+    
+    <category term="performance" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、Cache/TLB
+
+根据空间局部性和时间局部性原理，cpu中会引入Cache/TLB, 来加速数据读取。但是因为大型应用中，由于多个重要硬件结构（包括缓存、TLB和分支预测器）面临巨大压力，大型二进制文件往往表现出较差的CPU性能。
+
+二、二进制编译优化
+
+1、主动Cahce优化
+
+Cache优化 (taodudu.cc)
+
+主动识别出可能导致cache miss的原因，对二进制的bss，data，text段进行指定排布编译。
+
+2、反馈式优化
+
+openeuler 20.03版本支持以下优化选项的编译器下载地址：
+
+https://repo.huaweicloud.com/openeuler/openEuler-20.03-LTS/update/aarch64/Packages/
+
+https://repo.openeuler.org/openEuler-20.03-LTS-...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>userspace lock introduce</title>
+    <link href="https://luochenglcs.github.io/posts/%E7%94%A8%E6%88%B7%E6%80%81%E9%94%81/" rel="alternate" type="text/html" title="userspace lock introduce" />
+    <published>2023-11-30T00:00:00+00:00</published>
+  
+    <updated>2023-11-30T00:00:00+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/%E7%94%A8%E6%88%B7%E6%80%81%E9%94%81/</id>
+    <content src="https://luochenglcs.github.io/posts/%E7%94%A8%E6%88%B7%E6%80%81%E9%94%81/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="OS" />
+    
+    <category term="lock" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      锁介绍
+
+多线程下为了保护共享数据，需要同步机制。
+
+互斥：多线程中互斥是指多个线程访问同一资源时同时只允许一个线程对其进行访问，具有唯一性和排它性。但互斥无法限制访问者对资源的访问顺序，即访问是无序的；
+同步：多线程同步是指在互斥的基础上（大多数情况），通过其它机制实现访问者对资源的有序访问。在大多数情况下，同步已经实现了互斥，特别是所有写入资源的情况必定是互斥的。少数情况是指可以允许多个访问者同时访问资源。
+
+
+reference：https://zhuanlan.zhihu.com/p/608618791
+
+互斥锁
+
+介绍
+
+在多任务操作系统中，同时运行的多个任务可能都需要使用同一种资源。为了同一时刻只允许一个任务访问资源，需要用互斥锁对资源进行保护。互斥锁是一种简单的加锁的方法来控制对共享资源的访问，互斥锁只有两种状态,即上锁( lock )和解锁( unlock )。
+
+锁...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>userspace rcu lock</title>
+    <link href="https://luochenglcs.github.io/posts/userspace-rcu%E9%94%81/" rel="alternate" type="text/html" title="userspace rcu lock" />
+    <published>2023-11-29T00:00:00+00:00</published>
+  
+    <updated>2023-12-08T07:13:09+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/userspace-rcu%E9%94%81/</id>
+    <content src="https://luochenglcs.github.io/posts/userspace-rcu%E9%94%81/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="OS" />
+    
+    <category term="lock" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      RCU
+
+介绍
+
+Read-copy update (RCU) is a synchronization mechanism that was added to the Linux kernel in October of 2002. RCU achieves scalability improvements by allowing reads to occur concurrently with updates.
+
+
+RCU利用一种Publish-Subscribe的机制，在Writer端增加一定负担，使得Reader端几乎可以Zero-overhead。
+
+RCU适合用于同步基于指针实现的数据结构（例如链表，哈希表等），同时由于他的Reader 0 overhead的特性，特别适用用读操作远远大与写操作的场景。
+
+RCU适合数据库吗？
+
+http://linuxcpp.0voic...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>glibc 读写锁pthread_rw_lock</title>
+    <link href="https://luochenglcs.github.io/posts/glibc-%E8%AF%BB%E5%86%99%E9%94%81/" rel="alternate" type="text/html" title="glibc 读写锁pthread_rw_lock" />
+    <published>2023-11-29T00:00:00+00:00</published>
+  
+    <updated>2023-11-29T00:00:00+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/glibc-%E8%AF%BB%E5%86%99%E9%94%81/</id>
+    <content src="https://luochenglcs.github.io/posts/glibc-%E8%AF%BB%E5%86%99%E9%94%81/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="glibc" />
+    
+    <category term="lock" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      读写锁
+
+介绍
+
+
+  读写锁允许更高的并行性，也叫共享互斥锁。互斥量要么是加锁状态，要么就是解锁状态，而且一次只有一个线程可以对其加锁。读写锁可以有3种状态：读模式下加锁状态、写模式加锁状态、不加锁状态。一次只有一个线程可以占有写模式的读写锁，但是多个线程可以同时占有读模式的读写锁,即允许多个线程读但只允许一个线程写。
+  当读操作较多，写操作较少时，可用读写锁提高线程读并发性
+
+
+具体实现：
+
+以pthread_rwlock_rdlock为例，其他同理
+
+实际有个互斥锁，保护读写锁的数据。
+
+//arm64
+typedef union
+{
+  struct
+  {
+    int __lock;
+    unsigned int __nr_readers;
+    unsigned int __readers_wakeup;
+    unsigned int __writer_w...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>MMDB (memory database)</title>
+    <link href="https://luochenglcs.github.io/posts/%E5%86%85%E5%AD%98%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="alternate" type="text/html" title="MMDB (memory database)" />
+    <published>2023-11-13T00:00:00+00:00</published>
+  
+    <updated>2023-12-10T14:00:34+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/%E5%86%85%E5%AD%98%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
+    <content src="https://luochenglcs.github.io/posts/%E5%86%85%E5%AD%98%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="db" />
+    
+    <category term="mmdb" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      内存数据库
+
+redo log &amp;amp;&amp;amp; undo log &amp;amp;&amp;amp; bin log
+
+
+
+ACID:数据库事务执行的四要素：atomicity原子性，consistency一致性，isolation隔离性，durability持久性。
+
+reference: https://blog.csdn.net/weixin_47786582/article/details/132701284
+
+而事务的原子性、一致性和持久性由事务的 redo 日志和 undo 日志来保证。
+
+REDO LOG 称为 重做日志 ，提供再写入操作，恢复提交事务修改的页操作，用来保证事务的持久性。
+UNDO LOG 称为 回滚日志 ，回滚行记录到某个特定版本，用来保证事务的原子性、一致性。
+
+redo log : 是存储引擎层(innodb)生成的日志, 记录的是” 物理级别 “上的页修...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Hundsun Lightos</title>
+    <link href="https://luochenglcs.github.io/posts/HUNDSUN-LightOS/" rel="alternate" type="text/html" title="Hundsun Lightos" />
+    <published>2023-10-30T00:00:00+00:00</published>
+  
+    <updated>2023-10-31T06:58:32+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/HUNDSUN-LightOS/</id>
+    <content src="https://luochenglcs.github.io/posts/HUNDSUN-LightOS/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+title: LightOS
+author: luochunsheng
+date: 2023-10-01
+categories: [OS, Low Latency]
+tags: [OS]
+render_with_liquid: false
+img_path: ‘/posts’
+—
+
+一、LigthOS简介
+1、LightOS介绍
+
+• 恒生LightOS操作系统是基于国内openEuler开源社区构建的企业级操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。
+• 恒生电子基于金融业务需求对openEuler的核心应用进行改造优化。比如针对清算等场景,LightOS将在操作系统的内核裁剪、文件系统优化、CPU内存优化等方面进行改造。再如极速交易场景,网络交互是核心卡点,LightOS将在网卡以及RDMA进行调优适配,以...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Rtlinux</title>
+    <link href="https://luochenglcs.github.io/posts/RTlinux/" rel="alternate" type="text/html" title="Rtlinux" />
+    <published>2023-10-01T00:00:00+00:00</published>
+  
+    <updated>2023-09-28T08:39:00+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/RTlinux/</id>
+    <content src="https://luochenglcs.github.io/posts/RTlinux/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="OS" />
+    
+    <category term="realtime" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1、国产RTlinux？
+
+2、相比linux在各个子系统做了那些优化？
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>进程保存和恢复</title>
+    <link href="https://luochenglcs.github.io/posts/process-checkpoint-restore/" rel="alternate" type="text/html" title="进程保存和恢复" />
+    <published>2023-09-28T00:00:00+00:00</published>
+  
+    <updated>2023-09-28T08:39:00+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/process-checkpoint-restore/</id>
+    <content src="https://luochenglcs.github.io/posts/process-checkpoint-restore/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="sched" />
+    
+    <category term="checkpoint" />
+    
+    <category term="restore" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1、当前已有进程保存和恢复机制
+
+2、能做到线程级别
+
+3、线程的保存和恢复结合svm能做什么？
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>struct folio</title>
+    <link href="https://luochenglcs.github.io/posts/linux-struct-folio/" rel="alternate" type="text/html" title="struct folio" />
+    <published>2023-09-27T00:00:00+00:00</published>
+  
+    <updated>2023-09-28T08:39:00+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-struct-folio/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-struct-folio/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="MM" />
+    
+    <category term="struct folio" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      介绍linux内核新引入的struct folio
+1、为什么引入？
+
+2、带来什么好处？
+
+3、基于这个机制会带来什么变化？
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Userspace Memory Management</title>
+    <link href="https://luochenglcs.github.io/posts/userspace-memory-management/" rel="alternate" type="text/html" title="Userspace Memory Management" />
+    <published>2023-09-25T00:00:00+00:00</published>
+  
+    <updated>2023-09-25T00:00:00+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/userspace-memory-management/</id>
+    <content src="https://luochenglcs.github.io/posts/userspace-memory-management/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="MM" />
+    
+    <category term="Userspace" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      用户态内存管理器分析对比
+1、jemalloc
+
+2、tcmalloc
+
+3、ptmalloc
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>NVMe Introduction</title>
+    <link href="https://luochenglcs.github.io/posts/NVMe-Introduction/" rel="alternate" type="text/html" title="NVMe Introduction" />
+    <published>2023-07-31T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/NVMe-Introduction/</id>
+    <content src="https://luochenglcs.github.io/posts/NVMe-Introduction/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+    <category term="NVMe" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1、NVMe
+
+转自https://www.netapp.com/cn/info/what-is-nvme.aspx
+
+NVMe（Nonvolatile Memory Express，非易失性内存标准）是一种闪存和下一代固态驱动器 (SSD) 的全新存储访问和传输协议，可为所有类型的企业工作负载提供最高的吞吐量和最快的响应速度。
+
+如今，消费者应用程序和企业应用程序的用户都期待越来越快的响应速度，虽然应用程序本身复杂性大幅提高且越来越依赖于资源。
+
+为帮助提供高带宽低延迟的用户体验，NVMe 协议可通过 PCI Express (PCIe) 总线访问闪存存储；该总线支持数以万计的并行命令队列，因此比受限于单个命令队列的硬盘和传统全闪存架构要快得多。
+
+NVMe 规范可利用各种计算环境中的非易失性存储，而且适应未来需要，可扩展，并能够与尚未发明的永久性内存技术搭配使用。
+
+NVMe 数...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Deep Learning Basics</title>
+    <link href="https://luochenglcs.github.io/posts/Deep-Learning-Basics/" rel="alternate" type="text/html" title="Deep Learning Basics" />
+    <published>2023-06-01T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Deep-Learning-Basics/</id>
+    <content src="https://luochenglcs.github.io/posts/Deep-Learning-Basics/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+    <category term="Deep Learning" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Reference: https://cloud.tencent.com/developer/article/1695022
+
+深度学习中使用的batchsize, step(iteration), epoch 含义以及其关系
+
+发布于 2020-09-10 11:16:00
+
+1.6K0
+
+举报
+
+
+  
+    
+      变量
+      含义
+    
+  
+  
+    
+      epoch
+      一个epoch表示所有训练样本运算学习一遍
+    
+    
+      iteration/step
+      表示每运行一个iteration/step，更新一次参数权重，即进行一次学习，每一次更新参数需要batch size个样本进行运算学习，根据运算结果调整更新一次参数。
+    
+    
+      batch size
+      1次迭代所使用的样...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Input-Output Memory Management Unit</title>
+    <link href="https://luochenglcs.github.io/posts/linux-iommu/" rel="alternate" type="text/html" title="Input-Output Memory Management Unit" />
+    <published>2023-02-20T00:00:00+00:00</published>
+  
+    <updated>2024-04-18T08:54:27+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-iommu/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-iommu/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="IOMMU" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Intel IOMMU Introduction https://kernelgo.org/intel_iommu.html
+https://blog.csdn.net/21cnbao/article/details/106293976
+
+
+对于Intel的硬件辅助虚拟化方案而言核心的两大技术分别是VT-x和VT-d。 其中VT-x中主要引入了non-root模式(VMCS)以及EPT页表等技术，主要关注于vCPU的虚拟化和内存虚拟化。 而VT-d的引入则是重点关注设备直通(passthrough)方面（即IO虚拟化）。
+
+VT-x中在non-root模式下，MMU直接使用EPT page table来完成GPA-&amp;gt;HVA-&amp;gt;HPA的两级翻译， VT-d中在non-root模式下，则由IOMMU来使用Context Table和IOMMU page table完成设备DM...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kenrel autonuma</title>
+    <link href="https://luochenglcs.github.io/posts/linux-autonuma/" rel="alternate" type="text/html" title="Kenrel autonuma" />
+    <published>2023-02-03T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-autonuma/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-autonuma/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="autonuma" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      https://lwn.net/ml/linux-kernel/20201027063217.211096-2-ying.huang@intel.com/
+
+解决快速内存和慢速内存共存场景下的内存使用问题：
+
+1、识别hot/cold页，将hot页迁移到快速内存
+
+2、快速内存内存紧张时，换出cold内存。
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel Data Access Monitor</title>
+    <link href="https://luochenglcs.github.io/posts/linux-damon/" rel="alternate" type="text/html" title="Kernel Data Access Monitor" />
+    <published>2023-01-31T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-damon/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-damon/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="damon" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      DAMON：Linux Kernel官方的内存访问频次监控统计框架
+
+DAMON（Data Access MONitor）是linux kernel的内存访问频次监控统计框架。在5.15进入了Kernel主线，一直在迭代（去看看）。
+
+DAMON可以做虚拟内存和物理内存的访问监控，监控的结果是数据的访问频繁程度，可以通过回调函数（比如利用MADV），对冷热内存做很多内存优化的操作，包括冷内存的swap out和将热页组织为大页等。
+
+虚拟内存监控和物理内存监控都是通过检查PTE的accessed bit来做访问监控的。虚拟内存监控，是直接访问目标虚拟地址空间的页表即可。物理内存则是，访问每个映射到目标物理地址空间的页表。检查和重置accessed bit可能对内存的回收和idle page track机制造成干扰，damon使用PG_idle 和 PG_young page 标志来避...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel Virtual Function I/O</title>
+    <link href="https://luochenglcs.github.io/posts/linux-vfio/" rel="alternate" type="text/html" title="Kernel Virtual Function I/O" />
+    <published>2022-12-13T00:00:00+00:00</published>
+  
+    <updated>2024-04-18T03:53:14+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-vfio/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-vfio/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="VFIO" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、vfio
+
+Virtual Function I/O (VFIO) 是一种现代化的设备直通方案，它充分利用了VT-d/AMD-Vi技术提供的DMA Remapping和Interrupt Remapping特性， 在保证直通设备的DMA安全性同时可以达到接近物理设备的I/O的性能。 用户态进程可以直接使用VFIO驱动直接访问硬件，并且由于整个过程是在IOMMU的保护下进行因此十分安全， 而且非特权用户也是可以直接使用。 换句话说，VFIO是一套完整的用户态驱动(userspace driver)方案，因为它可以安全地把设备I/O、中断、DMA等能力呈现给用户空间。
+
+为了达到最高的IO性能，虚拟机就需要VFIO这种设备直通方式，因为它具有低延时、高带宽的特点，并且guest也能够直接使用设备的原生驱动。 这些优异的特点得益于VFIO对VT-d/AMD-Vi所提供的DMA Rema...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>linux Slab</title>
+    <link href="https://luochenglcs.github.io/posts/linux-slab/" rel="alternate" type="text/html" title="linux Slab" />
+    <published>2022-12-08T00:00:00+00:00</published>
+  
+    <updated>2024-04-18T03:06:14+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-slab/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-slab/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="Slab" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、slab
+
+https://zhuanlan.zhihu.com/p/166649492 Linux内存管理：slub分配器
+https://www.jianshu.com/p/95d68389fbd1 slab分配器
+细节拉满，80 张图带你一步一步推演 slab 内存池的设计与实现
+https://segmentfault.com/a/1190000043626203  
+
+
+​	内核中的物理内存由伙伴系统(buddy system)进行管理，它的分配粒度是以物理页帧(page)为单位的，但内核中有大量的数据结构只需要若干bytes的空间，倘若仍按页来分配，势必会造成大量的内存被浪费掉。slab分配器的出现就是为了解决内核中这些小块内存分配与管理的难题。slab分配器是基于buddy页分配器，在它上面实现了一层面向对象的缓存管理机制。
+
+
+
+
+
+1) 主要数据结构
+
+1 st...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>The Kernel Memory Sanitizer (KMSAN)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-kmsan/" rel="alternate" type="text/html" title="The Kernel Memory Sanitizer (KMSAN)" />
+    <published>2022-12-08T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-kmsan/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-kmsan/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="KMSAN" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、kmsan
+
+https://github.com/google/kmsan/blob/master/Documentation/dev-tools/kmsan.rst
+KMSAN is a dynamic error detector aimed at finding uses of uninitialized values. It is based on compiler instrumentation, and is quite similar to the userspace MemorySanitizer tool.
+
+An important note is that KMSAN is not intended for production use, because it drastically increases kernel memory footprint an...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel Electric Fence (kfence)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-kfence/" rel="alternate" type="text/html" title="Kernel Electric Fence (kfence)" />
+    <published>2022-12-07T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-kfence/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-kfence/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="kfence" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、kfence
+
+Kfence (Kernel Electric Fence) 是 Linux 内核引入的一种低开销的内存错误检测机制，因为是低开销的所以它可以在运行的生产环境中开启，同样由于是低开销所以它的功能相比较 Kasan 会偏弱。
+
+Kfence 的基本原理非常简单，它创建了自己的专有检测内存池 kfence_pool。在 data page 的两边加上了 fence page 电子栅栏，利用 MMU 的特性把 fence page 设置成不可访问。如果对 data page 的访问越过了 page 边界， 就会立刻触发异常。
+
+Kfence 的主要特点如下：
+
+
+  
+    
+      item
+      Kfence
+      Kasan
+    
+  
+  
+    
+      检测密度
+      抽样法，默认每 100ms 提供一个可检测的内存
+   ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>The Kernel Address Sanitizer (KASAN)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-kasan/" rel="alternate" type="text/html" title="The Kernel Address Sanitizer (KASAN)" />
+    <published>2022-12-06T00:00:00+00:00</published>
+  
+    <updated>2023-08-07T13:05:29+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-kasan/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-kasan/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="KASAN" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Reference:
+https://cloud.tencent.com/developer/article/1381068  KASAN实现原理
+
+
+一、KASAN概念
+
+KASAN是一个动态检测内存错误的工具。KASAN可以	。功能比SLUB DEBUG齐全并且支持实时检测。
+
+CONFIG_SLUB_DEBUG=y
+CONFIG_KASAN=y
+
+
+二、KASAN检测机制
+
+在代码运行时，每一次memory access都会检测对应的shawdow memory的值是否valid。这就需要编译器为我们做些工作。编译的时候，在每一次memory access前编译器会帮我们插入__asan_load##size()或者__asan_store##size()函数调用（size是访问内存字节的数量）。这也是要求更新版本gcc的原因，只有更新的版本才支持自动插入。
+
+mov x0, ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>mmap_lock debugger</title>
+    <link href="https://luochenglcs.github.io/posts/ebpf-tracepoint-mmap-lock/" rel="alternate" type="text/html" title="mmap_lock debugger" />
+    <published>2022-11-02T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/ebpf-tracepoint-mmap-lock/</id>
+    <content src="https://luochenglcs.github.io/posts/ebpf-tracepoint-mmap-lock/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="mmap_lock" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、背景
+通过内核的新增的mmap_lock tracepoint结合ebpf，实现对mmap_lock的调测，监控线程持锁时间
+
+二、实现
+
+1、社区在mmap_lock增加tracepoint
+
+https://github.com/torvalds/linux/commit/2b5067a8143e34aa3fa57a20fb8a3c40d905f942
+https://github.com/torvalds/linux/commit/10994316089c9682f2fbe0be0b1e82bcaf5f4e8c
+https://github.com/torvalds/linux/commit/2f1aaf3ea666b737ad717b3d88667225aca23149
+在down/up read/write位置增加tracepoint点，可通过tracepoint来统计...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Distributed Shared Memory</title>
+    <link href="https://luochenglcs.github.io/posts/Distributed-Shared-Memory/" rel="alternate" type="text/html" title="Distributed Shared Memory" />
+    <published>2022-07-12T00:00:00+00:00</published>
+  
+    <updated>2023-08-08T09:05:07+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Distributed-Shared-Memory/</id>
+    <content src="https://luochenglcs.github.io/posts/Distributed-Shared-Memory/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="DSM" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、Popcorn DSM:distributed shared memory
+
+https://www.ssrg.ece.vt.edu/papers/icdcs20.pdf
+(0) Migrating Execution Contexts
+    要跨计算机边界迁移线程，我们需要获取描述原始节点上线程当前状态的执行上下文。幸运的是，现代操作系统维护这样
+    的执行上下文，以在系统调用和上下文切换之间保留线程状态。特别是，Linux使用结构pt regs和结构mm_struct分别
+    在系统调用和上下文交换机之间保留寄存器和虚拟地址状态。我们利用这些机制来获取执行上下文。
+
+	DEX通过消息层在节点之间传输执行上下文（有关详细信息，请参见第III-E节）。我们将引用创建进程线程的节点作为
+    线程的原点。进程中的所有线程都具有相同的起源，即第一次创建进程的节点。我们将将...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>High Performance OS - caladan</title>
+    <link href="https://luochenglcs.github.io/posts/High-Performance-OS-caladan/" rel="alternate" type="text/html" title="High Performance OS - caladan" />
+    <published>2021-11-14T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/High-Performance-OS-caladan/</id>
+    <content src="https://luochenglcs.github.io/posts/High-Performance-OS-caladan/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="caladan" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Caladan: Mitigating Interference at Microsecond Timescales
+1 场景
+交互式、数据密集型Web服务 —— 可变负载。在真实场景，资源使用以及干扰频繁变化的情况下，隔离分区式的解决方案存在低CPU利用率（负载低）和长尾时延（负载高）的问题。即便有些方案增加了CPU资源流动的设计，但是从负载变化到资源流动收敛，需要毫秒级甚至是秒级的时间，无法应对短时的负载突变。
+
+2 技术概述
+
+基于调度时延、内存带宽、LLC未命中率等指标，实现上层任务的调度，以及CPU的流动，保持高CPU利用率和严格的性能隔离（吞吐量和尾时延）。
+从负载突变到CPU流动收敛可以达到微妙级别。
+
+1、微妙级的性能指标监控（调度时延、内存带宽、LLC未命中率），实时反馈当前系统负载，迅速应对负载突变的情况。
+调度时延的测量基于runtime来实现。所有的业务进程都...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Direct memory access(DMA)</title>
+    <link href="https://luochenglcs.github.io/posts/dma-and-iommu/" rel="alternate" type="text/html" title="Direct memory access(DMA)" />
+    <published>2021-10-14T00:00:00+00:00</published>
+  
+    <updated>2023-08-08T01:08:45+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/dma-and-iommu/</id>
+    <content src="https://luochenglcs.github.io/posts/dma-and-iommu/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="DMA" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、DMA
+
+DMA，全称Direct Memory Access，即直接存储器访问。
+
+DMA传输将数据从一个地址空间复制到另一个地址空间，提供在外设和存储器之间或者存储器和存储器之间的高速数据传输。当CPU初始化这个传输动作，传输动作本身是由DMA控制器来实现和完成的。DMA传输方式无需CPU直接控制传输，也没有中断处理方式那样保留现场和恢复现场过程，通过硬件为RAM和IO设备开辟一条直接传输数据的通道，使得CPU的效率大大提高.
+
+
+
+【STM32】 DMA原理，步骤超细详解，一文看懂DMA
+
+看到STM32内核，存储器，外设及DMA的连接，这些硬件最终通过各种各样的线连接到总线矩阵中，硬件结构之间的数据转移都经过总线矩阵的协调，使各个外设和谐的使用总线来传输数据。
+
+
+
+AHB介绍：
+
+  AHB总线规范是AMBA总线规范的一部分，AMBA总线规范是ARM公司提出的总线规范，...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>HugePages</title>
+    <link href="https://luochenglcs.github.io/posts/linux-hugepages/" rel="alternate" type="text/html" title="HugePages" />
+    <published>2021-10-14T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-hugepages/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-hugepages/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="hugepages" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1 linux hugepage的目的
+减少tlb miss
+
+2 静态大页
+
+3 透明大页
+
+4 arm64特有：contiguous bit
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>High Performance OS - shanango</title>
+    <link href="https://luochenglcs.github.io/posts/High-Performance-OS-shanango/" rel="alternate" type="text/html" title="High Performance OS - shanango" />
+    <published>2021-10-14T00:00:00+00:00</published>
+  
+    <updated>2024-04-18T02:37:58+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/High-Performance-OS-shanango/</id>
+    <content src="https://luochenglcs.github.io/posts/High-Performance-OS-shanango/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="shanango" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、论序
+
+Shenango  Achieving High CPU Efficiency for latency-sensitive dc workloads.pdf (526.36KB)
+https://github.com/shenango/shenango
+
+IX A Protected Dataplane Operating System for High Throughput and Low Latency.pdf (2.28MB)
+The IX Operating System Combining Low Latency, High Throughput, and efficiency in a protected dataplane.pdf (1.18MB)
+IX  A Protected Dataplane Operating System for High Thr...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>High Performance OS - Intel HPC kernel mOS</title>
+    <link href="https://luochenglcs.github.io/posts/Intel-HPC-mOS/" rel="alternate" type="text/html" title="High Performance OS - Intel HPC kernel mOS" />
+    <published>2021-09-22T00:00:00+00:00</published>
+  
+    <updated>2023-08-07T11:50:53+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Intel-HPC-mOS/</id>
+    <content src="https://luochenglcs.github.io/posts/Intel-HPC-mOS/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="mOS" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、 简介
+
+​	Intel不仅是最大的CPU公司，还是全球最大的软件公司之一，10万员工中有1.5万都是软件工程师。在OS系统上，Intel也开发了多种系统了，现在最新产品是mOS，一款专用于HPC超算的高性能Linux变种。Intel的mOS系统很少人关注，官方透露的细节也不多，目前还在开发中，主要用于高性能计算，在超算负载中可以提供更好的并行性及可靠性。
+
+​	mOS系统依然会基于Linux扩展而来，目前最新版0.8版使用的是Linux 5.4 LTS内核，但它又有自己的LWK轻量级内核，Linux内核管理少量部分CPU核心，以确保兼容性，LWK内核管理系统其他部分，类似Mutil-OS多OS。
+
+​	Intel的mOS已经在ASCI Red，IBM Blue Gene等超算上应用，不过它最终的目标是用于2021年的百亿亿次超算Aurora上，后者采用了未来一代的Intel至强...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Interesting Kernel Scheduler - BFS</title>
+    <link href="https://luochenglcs.github.io/posts/Interesting-scheduler-BFS/" rel="alternate" type="text/html" title="Interesting Kernel Scheduler - BFS" />
+    <published>2021-09-21T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Interesting-scheduler-BFS/</id>
+    <content src="https://luochenglcs.github.io/posts/Interesting-scheduler-BFS/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="BFS" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、BFS
+
+https://cloud.tencent.com/developer/article/1517909  知乎介绍， 很有意思
+http://kernel.meizu.com/bfs-porting.html 魅族移植，看看就行
+
+
+二、改进MuQSS
+
+附：
+
+http://ck.kolivas.org/patches/ 补丁
+
+
+三、脑残调度器，其中skiplist想法很有意思
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Numactl</title>
+    <link href="https://luochenglcs.github.io/posts/numactl/" rel="alternate" type="text/html" title="Numactl" />
+    <published>2021-09-10T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/numactl/</id>
+    <content src="https://luochenglcs.github.io/posts/numactl/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="Numactl" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      numactl github:
+https://github.com/numactl/numactl
+
+一 NUMA技术
+
+https://blog.csdn.net/don_chiang709/article/details/100735052
+NUMA技术将CPU划分成不同的组（Node)，每个Node由多个CPU组成，并且有独立的本地内存、I/O等资源。Node之间通过互联模块连接和沟通，因此除了本地内存外，每个CPU仍可以访问远端Node的内存，只不过效率会比访问本地内存差一些，我们用Node之间的距离（Distance，抽象的概念）来定义各个Node之间互访资源的开销。
+**Node-&amp;gt;Socket-&amp;gt;Core-&amp;gt;Processor**
+随着多核技术的发展，将多个CPU封装在一起，这个封装被称为插槽Socket；Core是socket上独立的硬件单元；通过...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel Page_Idle</title>
+    <link href="https://luochenglcs.github.io/posts/linux-page_idle-bitmap/" rel="alternate" type="text/html" title="Kernel Page_Idle" />
+    <published>2021-09-01T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-page_idle-bitmap/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-page_idle-bitmap/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="page_idle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      动机
+
+空闲页跟踪功能允许跟踪哪些内存页
+工作负载访问的空闲状态。此信息对
+估计工作负载的工作集大小，而工作集的大小又可以用于
+配置工作负载参数、设置内存控制组限制、
+或者决定在计算群集中将工作负载放置到何处。
+
+通过CONFIG_IDLE_PAGE_TRACKING=y来启用。
+
+用户接口
+
+空闲页面跟踪API位于/sys/kernel/mm/page_idle。目前，
+它由唯一的读写文件/sys/kernel/mm/page_idle/bitmap组成。
+
+该文件实现了位图，其中每个位对应一个内存页。位图由8字节整数数组表示，PFN #i处的页面映射到数组元素#i/64的bit #i%64，字节顺序为本机。当某个bit位被置位时，对应的页面处于空闲状态。
+
+如果页面被标记为空闲后未被访问，则认为该页面处于空闲状态（有关“已访问”的更多详细信息，请参阅IMPLEMENTATION ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Customized Scheduler - google Ghost</title>
+    <link href="https://luochenglcs.github.io/posts/Customized-Scheduler-In-Userspace/" rel="alternate" type="text/html" title="Customized Scheduler - google Ghost" />
+    <published>2021-08-22T00:00:00+00:00</published>
+  
+    <updated>2024-04-18T02:17:44+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Customized-Scheduler-In-Userspace/</id>
+    <content src="https://luochenglcs.github.io/posts/Customized-Scheduler-In-Userspace/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="Scheduler" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、鸿蒙调度/LiteOS调度
+
+//鸿蒙OS调度
+https://codechina.csdn.net/kuangyufei/kernel_liteos_a_note/-/wikis/04_%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E7%AF%87
+https://juejin.cn/post/7015965298234753032
+
+
+线程状态说明：
+初始化（Init）：该线程正在被创建。
+就绪（Ready）：该线程在就绪列表中，等待CPU调度。
+运行（Running）：该线程正在运行。
+阻塞（Blocked）：该线程被阻塞挂起。Blocked状态包括：pend(因为锁、事件、信号量等阻塞)、suspend（主动pend）、delay(延时阻塞)、pendtime(因为锁、事件、信号量时间等超时等待)。
+退出（Exit）：该线程运行结束，等待父线程...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>The Robot Operating System 2 (ROS2)</title>
+    <link href="https://luochenglcs.github.io/posts/ROS2-For-Industrial-Control/" rel="alternate" type="text/html" title="The Robot Operating System 2 (ROS2)" />
+    <published>2021-07-21T00:00:00+00:00</published>
+  
+    <updated>2024-04-18T02:09:35+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/ROS2-For-Industrial-Control/</id>
+    <content src="https://luochenglcs.github.io/posts/ROS2-For-Industrial-Control/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="ROS2" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、ROS2介绍
+
+https://www.jianshu.com/p/3829624ac310 //ROS2简介 有图有介绍，很详细
+
+
+
+
+
+
+1) 基本概念ROS1 Vs ROS2.png
+
+Nodes-节点概念
+节点即Node，是ROS里面的一个执行体，可以和其他节点直接在ROS中互相通信。Node是Package里面的可执行文件
+的一个功能体现（也就是说Package的可执行文件能够实现的功能不仅仅是一个Node，还有其他的功能，但是Node
+是其最基本的一个功能）。
+
+节点通过发布messages到topic来实现互相通信。也可以调用ROS的service实现request和response的消息交换。
+
+
+Messages-消息概念
+message 是一种由类型字段（类型域）组成的简单数据结构。支持原始的标准类型（整数、浮点、布尔、数组
+等），同时支持类似C语言的结构和...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Realtime Operating System</title>
+    <link href="https://luochenglcs.github.io/posts/Real-time-operating-system/" rel="alternate" type="text/html" title="Realtime Operating System" />
+    <published>2021-06-28T00:00:00+00:00</published>
+  
+    <updated>2023-10-31T07:25:54+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Real-time-operating-system/</id>
+    <content src="https://luochenglcs.github.io/posts/Real-time-operating-system/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="RTOS" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、RT linux patch
+
+Linux kernel在spinlock、irq上下文方面无法抢占，因此高优先级任务被唤醒到得以执行的时间并不能完全确定。同时，Linux kernel本身也不处理优先级反转。RT-Preempt Patch是在Linux社区kernel的基础上，加上相关的补丁，以使得Linux满足硬实时的需求。
+
+RT-Preempt Patch对Linux kernel的主要改造包括：
+
+ //1. spinlock/sem优化，支持抢占
+Making in-kernel locking-primitives (using spinlocks) preemptible though reimplementation 
+with rtmutexes:
+
+Critical sections protected by i.e. spinlock_t and rwl...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Opensource License</title>
+    <link href="https://luochenglcs.github.io/posts/Opensource-license/" rel="alternate" type="text/html" title="Opensource License" />
+    <published>2021-05-01T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T13:29:48+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Opensource-license/</id>
+    <content src="https://luochenglcs.github.io/posts/Opensource-license/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="License" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、CDLL license
+
+```c
+/*
+
+  CDDL HEADER START
+ *
+  The contents of this file are subject to the terms of the
+  Common Development and Distribution License (the “License”).
+  You may not use this file except in compliance with the License.
+ *
+  You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+  or http://www.opensolaris.org/os/licensing.
+  See the License for the specific langu...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Memory Leakage Check Mechanism</title>
+    <link href="https://luochenglcs.github.io/posts/Memory-Leakage-Check-Mechanism/" rel="alternate" type="text/html" title="Memory Leakage Check Mechanism" />
+    <published>2021-04-02T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T13:38:51+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Memory-Leakage-Check-Mechanism/</id>
+    <content src="https://luochenglcs.github.io/posts/Memory-Leakage-Check-Mechanism/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="userspace memleak" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      基于下面网站内容分析
+
+https://blog.csdn.net/lqxandroid2012/article/details/79799844
+
+一、libumem内存检查
+
+https://www.codenong.com/8287649/
+
+环境变量
+UMEM_DEBUG
+此变量包含逗号分隔的选项列表。忽略无法识别的选项。可能的选项包括：
+
+审计【=帧】
+此选项启用记录审计信息，包括线程ID、高分辨率时间戳和每次分配上最后一个操作（分配或空闲）的堆栈跟踪。如果启用了事务日志记录（请参阅UMEM_LOGGING），则也会记录此审计信息。
+
+frames参数设置审计结构中记录的堆栈帧数。帧的上限由实现定义。如果请求较大的值，则使用上界。
+
+如果不指定frames或者frames不是整数，则使用默认值15。
+
+此选项还启用“guards”选项。
+
+内容【=计数】
+如果启用了审计和内...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>NEON Instruction</title>
+    <link href="https://luochenglcs.github.io/posts/NEON-Instruction/" rel="alternate" type="text/html" title="NEON Instruction" />
+    <published>2021-03-21T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/NEON-Instruction/</id>
+    <content src="https://luochenglcs.github.io/posts/NEON-Instruction/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Tools" />
+    
+    <category term="NEON" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1、NEON加速之memcpy在ARM平台的优化
+
+https://www.codeleading.com/article/8021520306/ NEON加速之memcpy在ARM平台的优化
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>libumem Introduce</title>
+    <link href="https://luochenglcs.github.io/posts/libumem-Introduce/" rel="alternate" type="text/html" title="libumem Introduce" />
+    <published>2021-03-21T00:00:00+00:00</published>
+  
+    <updated>2023-08-05T06:19:53+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/libumem-Introduce/</id>
+    <content src="https://luochenglcs.github.io/posts/libumem-Introduce/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="libumem" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一款你值得拥有的内存问题定位神器
+
+一 背景介绍
+
+
+
+​      使用C语言开发时，对于内存资源的申请和释放时非常常见的场景，但这也给广大程序带来了很多困扰，一旦出现如越界访问，重复释放，use after free，内存泄露等问题时，定位起来非常麻烦。
+
+​	因为这个原因，现有的大部分内存管理框架或多或少的都会提供一些内存调测能力，协助定位问题。但是目前用起来不是太难使用，就是约束限制太强，使用体验太差，因此到现在也没有出现网红款，今天我们就给大家带来一款内存调测神器：libumem。
+
+​	libumem类似于linux上的ptmalloc/tcmalloc等用户态内存管理框架，提供高效的内存管理功能，同时提供了非常丰富及高效的调测信息记录功能，配合mdb工具，可以轻松观察程序内存的分配情况和定位内存泄漏的问题。
+
+​	libumem最初在Solaris 9中提供，OmniT...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Linux Heterogeneous memory management (HMM)</title>
+    <link href="https://luochenglcs.github.io/posts/kernel-hmm/" rel="alternate" type="text/html" title="Linux Heterogeneous memory management (HMM)" />
+    <published>2021-03-04T04:10:00+00:00</published>
+  
+    <updated>2023-08-08T07:06:12+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/kernel-hmm/</id>
+    <content src="https://luochenglcs.github.io/posts/kernel-hmm/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="HMM" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、HMM是什么？
+Reference：异构内存管理 Heterogeneous Memory Management (HMM)
+
+翻译于：https://elixir.bootlin.com/linux/v5.5-rc2/source/Documentation/vm/hmm.rst
+
+提供基础设施和帮助程序以将非常规内存（设备内存，如板上 GPU 内存）集成到常规内核路径中，其基石是此类内存的专用结构页面（请参阅本文档的第 5 至 7 节）。
+
+HMM 还为 SVM（共享虚拟内存）提供了可选的帮助程序，即允许设备透明地访问与 CPU 一致的程序地址，这意味着 CPU 上的任何有效指针也是该设备的有效指针。这对于简化高级异构计算的使用变得必不可少，其中 GPU、DSP 或 FPGA 用于代表进程执行各种计算。
+
+本文档分为以下部分：在第一部分中，我揭示了与使用特定于设备的内存分配器...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel Samepage Merging (KSM)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-ksm/" rel="alternate" type="text/html" title="Kernel Samepage Merging (KSM)" />
+    <published>2021-03-03T00:00:00+00:00</published>
+  
+    <updated>2023-08-04T09:06:52+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-ksm/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-ksm/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="KSM" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、KSM机制
+
+https://zhuanlan.zhihu.com/p/102469328
+详细的代码流程图
+https://www.kernelnote.com/entry/linux-ksm-merge
+详细的代码分析
+
+
+​	内核采用虚拟内存管理技术为每个进程分配独立的虚拟内存地址空间。而物理内存的分配是由进程去访问虚拟地址时产生缺页异常 (Page Fault) 来
+触发。一个进程的虚拟地址空间在内核中用内存描述符struct mm_struct进行表示，而进程的虚拟地址空间又被划分为多个虚拟内存区域struct vm_area_struct，简称vma。另外，进程描述符由struct task_struct中的mm域记录。
+
+
+
+KSM后常驻一个名叫ksmd非实时线程。它会执行 ksm.c 源码里的ksm_do_scan接口定时扫描被标记为MMF_VM_MERGEABL...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Peripherals Bus Delivery</title>
+    <link href="https://luochenglcs.github.io/posts/Peripherals-Bus-Delivery/" rel="alternate" type="text/html" title="Peripherals Bus Delivery" />
+    <published>2021-03-03T00:00:00+00:00</published>
+  
+    <updated>2023-08-05T06:20:58+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/Peripherals-Bus-Delivery/</id>
+    <content src="https://luochenglcs.github.io/posts/Peripherals-Bus-Delivery/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="Bus" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、HCCS
+
+Cache一致性总线HCCS，可以实现CPU和CPU之间的高速互联，通信速率高达每秒30GT，是业界主流CPU互联速率的2倍多。
+
+通过多CPU互联，我们率先实现256个物理核的NUMA架构，从而推出业界首款兼容ARM架构的最强算力4路服务器。
+异构计算的兴起，使得CPU与NPU之间的互联协议也很关键。华为创新性的将HCCS同样应用于CPU与NPU的高速互联
+，构建了xPU间的统一Cache一致性架构，xPU之间可以进行直接内存访问，实现高速数据交互。同时基于此架构，
+可实现通用算力和AI算力的灵活组合，打造最强算力的异构计算服务器。
+
+
+二、HBM  HIGH Bandwidth memory
+
+https://china.xilinx.com/support/documentation/white_papers/c_wp485-hbm.pdf
+硅与硅的堆叠结构允许...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>user space slab memory allocator - libumem</title>
+    <link href="https://luochenglcs.github.io/posts/sunos-libumem/" rel="alternate" type="text/html" title="user space slab memory allocator - libumem" />
+    <published>2021-02-03T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:13:29+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/sunos-libumem/</id>
+    <content src="https://luochenglcs.github.io/posts/sunos-libumem/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="libumem" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      对应github：
+https://github.com/luochenglcs/libumem
+
+reference:
+https://arrowpig1979.wordpress.com/2008/08/16/%e4%bd%bf%e7%94%a8libumem%e5%ae%9a%e4%bd%8dmemory-leak%e5%92%8cmemory-corruption%ef%bc%884%ef%bc%89/
+
+https://www.codenong.com/8287649/
+
+
+一、libumem介绍
+
+libumem是一个运行在用户模式的内存分配程序库，包含在Solaris 9及以后的版本中。libumem不仅能够优化程序的内存分配，而且还提供了内存分配调试和记录的功能，配合mdb工具，可以轻松观察程序内存的分配情况和定位内存泄漏的问题。
+
+libumem使用Slab概念。S...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Linux System Error Interrupt</title>
+    <link href="https://luochenglcs.github.io/posts/linux-SEI/" rel="alternate" type="text/html" title="Linux System Error Interrupt" />
+    <published>2021-02-03T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-SEI/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-SEI/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="SEI" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、SEI
+1 what is SEI?
+SEI中断是什么？SEI exception
+
+	#define *SEI*() __set_PRIMASK(0) //打开总中断
+
+
+el1_sei
+
+
+2 do_serror
+
+https://patchwork.kernel.org/project/linux-arm-kernel/patch/20171019145807.23251-11-james.morse@arm.com/
+
+//arch/arm64/kernel/entry.S
+el1_error:
+	kernel_entry 1
+	mrs	x1, esr_el1
+	enable_dbg
+	mov	x0, sp
+	bl	do_serror
+	kernel_exit 1
+ENDPROC(el1_error)
+
+el0_error:
+	kernel_entry 0
+el0_err...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>C++ try-catch</title>
+    <link href="https://luochenglcs.github.io/posts/c++-try-catch/" rel="alternate" type="text/html" title="C++ try-catch" />
+    <published>2021-02-03T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T11:16:51+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/c++-try-catch/</id>
+    <content src="https://luochenglcs.github.io/posts/c++-try-catch/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Tools" />
+    
+    <category term="try-catch" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一try-catch
+
+信息汇总：
+1、windows上可以扩展捕获SEGV异常的实现； linux标准C++上没有
+windows: https://www.codeproject.com/Articles/207464/Exception-Handling-in-Visual-Cplusplus
+2、linux上实现捕捉信号的方式
+	（1）main-&amp;gt; setjump -&amp;gt; signal_handle -&amp;gt;longjump -&amp;gt;catch
+	(2) signal -&amp;gt; signale_handle -&amp;gt; throw err -&amp;gt;catch//不推荐
+
+
+1 try-catch segv：
+
+1) 基本上是基于setjump和longjump和信号处理函数实现。
+
+2) 将信号转化为异常，注册信号处理函数，Throw SIGERR
+
+
+1)...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Remote Direct Memory Access (RDMA)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-rmda/" rel="alternate" type="text/html" title="Remote Direct Memory Access (RDMA)" />
+    <published>2021-01-26T00:00:00+00:00</published>
+  
+    <updated>2023-08-07T11:32:27+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-rmda/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-rmda/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="RDMA" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      RDMA
+
+References:
+https://zhuanlan.zhihu.com/p/55142557 RDMA技术详解（一）：RDMA概述
+https://community.mellanox.com/s/article/what-is-rdma-x   What is RDMA?
+
+[https://zh.wikipedia.org/wiki/%E5%9F%BA%E4%BA%8E%E8%9E%8D%E5%90%88%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9A%84RDMA](https://zh.wikipedia.org/wiki/基于融合以太网的RDMA)
+
+
+一、 RDMA
+
+​	Remote Direct Memory Access (RDMA) is the ability of accessing (read, write) memory...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel Address Space Layout Randomization (KASLR)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-kaslr/" rel="alternate" type="text/html" title="Kernel Address Space Layout Randomization (KASLR)" />
+    <published>2020-11-24T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-kaslr/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-kaslr/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="kaslr" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、KASLR
+内核地址随机化
+
+二、kaslr-seed
+地址随机化种子kaslr-seed
+
+kaslr-seed
+-----------
+
+This property is used when booting with CONFIG_RANDOMIZE_BASE as the
+entropy used to randomize the kernel image base address location. Since
+it is used directly, this value is intended only for KASLR, and should
+not be used for other purposes (as it may leak information about KASLR
+offsets). It is parsed as a u64 value, e....
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Vim cscope使用</title>
+    <link href="https://luochenglcs.github.io/posts/tools-vim-cscope/" rel="alternate" type="text/html" title="Vim cscope使用" />
+    <published>2020-10-23T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/tools-vim-cscope/</id>
+    <content src="https://luochenglcs.github.io/posts/tools-vim-cscope/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Tools" />
+    
+    <category term="vim" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      在ubuntu下的安装与配置如下——
+
+一、ctags 插件
+
+a)  功能：对浏览代码非常的方便, 可以在函数, 变量之间跳来跳去等等等等 (更多说明请百度或谷歌一下）
+
+b)   安装配置：
+
+终端下输入  sudo apt-get install ctags
+
+如果没发现该软件包就用   sudo apt-get install exuberant-ctags  就行了……
+
+如果还不行可以到官网下载源码手动编译安装,有点麻烦是不是？不要嫌麻烦，这也是一个学习的机会，如果遇到其他类似的你也可以仿照这里的例子，再配合压缩包里的README文件就能手动安装了，你说是不是，呵呵。
+
+下载地址   http://nchc.dl.sourceforge.net/project/ctags/ctags/5.8/ctags-5.8.tar.gz
+
+下载解压后
+
+$ cd ctags-5.8
+...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Modular Debugger (MDB)</title>
+    <link href="https://luochenglcs.github.io/posts/sunos-mdb/" rel="alternate" type="text/html" title="Modular Debugger (MDB)" />
+    <published>2020-10-20T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/sunos-mdb/</id>
+    <content src="https://luochenglcs.github.io/posts/sunos-mdb/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="mdb" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      适用于linux系统的mdb：
+https://github.com/luochenglcs/mdb
+
+If the code is useful to you - great !. Spread it around and get people to use, debug and enhance it.
+
+一、libumem_ready赋值
+
+umem_update_variables
+    	-&amp;gt;|umem_set_standalone  == -1 ? libumem_ready : UMEM_READVAR(umem_ready);
+
+
+umem_set_standalone
+    -&amp;gt;|mdb_lookup_by_obj
+    	-&amp;gt;|lookup_minimal_symbol("umem_alloc",NULL, NULL)
+
+
+UMEM_READ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel userfaultfd</title>
+    <link href="https://luochenglcs.github.io/posts/linux-userfaultfd/" rel="alternate" type="text/html" title="Kernel userfaultfd" />
+    <published>2020-09-24T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-userfaultfd/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-userfaultfd/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="userfaultfd" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Userfault只支持匿名页，hugetlb、共享内存；
+
+一、软件流程
+
+1 初始化
+调用__NR_userfaultfd syscall初始化
+调用syscall初始化建立匿名inode文件，并初始化file-&amp;gt;private_data,并返回用户态文件fd。
+
+
+  
+    用户态：
+
+    uffd = syscall(__NR_userfaultfd, O_CLOEXEC | O_NONBLOCK);
+    
+  
+  
+    内核态：
+
+    d = anon_inode_getfd("[userfaultfd]", &amp;amp;userfaultfd_fops, ctx,  
+	              O_RDWR | (flags &amp;amp; UFFD_SHARED_FCNTL_FLAGS));  
+   
+    
+  
+
+
+2、设置监视区
+io...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>numad systemctl start failed</title>
+    <link href="https://luochenglcs.github.io/posts/numad-start-failed/" rel="alternate" type="text/html" title="numad systemctl start failed" />
+    <published>2020-09-17T06:10:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/numad-start-failed/</id>
+    <content src="https://luochenglcs.github.io/posts/numad-start-failed/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="Package" />
+    
+    <category term="numad" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1 systemct start failed
+1、R9 x86环境systemctl启动失败
+
+● numad.service - numad - The NUMA daemon that manages application locality.
+   Loaded: loaded (/usr/lib/systemd/system/numad.service; disabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Wed 2020-09-16 11:08:09 CST; 2min 17s ago
+     Docs: man:numad
+  Process: 618176 ExecStart=/usr/bin/numad -i 15 (code=exited, status=1...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Kernel Probe (kprobe)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-kprobe/" rel="alternate" type="text/html" title="Kernel Probe (kprobe)" />
+    <published>2020-09-14T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T12:09:49+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-kprobe/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-kprobe/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="kprobe" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1 kprobe
+
+2 debugfs kprobe trace
+kprobe trace 使用debugfs的trace功能
+ p[:[GRP/]EVENT] [MOD:]SYM[+offs]|MEMADDR [FETCHARGS]  : Set a probe
+ r[MAXACTIVE][:[GRP/]EVENT] [MOD:]SYM[+0] [FETCHARGS]  : Set a return probe
+ -:[GRP/]EVENT                                         : Clear a probe
+
+GRP            : Group name. If omitted, use "kprobes" for it.
+EVENT          : Event name. If omitted, the event na...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>The Kernel Concurrency Sanitizer (KCSAN)</title>
+    <link href="https://luochenglcs.github.io/posts/linux-kcsan/" rel="alternate" type="text/html" title="The Kernel Concurrency Sanitizer (KCSAN)" />
+    <published>2020-09-11T00:00:00+00:00</published>
+  
+    <updated>2023-08-03T11:16:51+00:00</updated>
+  
+    <id>https://luochenglcs.github.io/posts/linux-kcsan/</id>
+    <content src="https://luochenglcs.github.io/posts/linux-kcsan/" />
+    <author>
+      <name>luochunsheng</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+    <category term="kcsan" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1 kcasan
+
+2 使用
+
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
